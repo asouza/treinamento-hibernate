@@ -9,6 +9,7 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Curso {
@@ -22,6 +23,16 @@ public class Curso {
 	@Enumerated(EnumType.STRING)
 	private Nivel nivel;
 	private int estimativaConclusao;
+	@ManyToOne
+	private Carreira carreira;
+	
+	public Carreira getCarreira() {
+		return carreira;
+	}
+
+	public void setCarreira(Carreira carreira) {
+		this.carreira = carreira;
+	}
 
 	public String getNome() {
 		return nome;
