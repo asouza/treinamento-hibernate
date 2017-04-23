@@ -1,7 +1,11 @@
-#eclipse
+#ides
 .settings/
 .project
 .classpath
+.idea
+*.iws
+.idea_modules/
+/out/
 
 
 # Compiled class file
