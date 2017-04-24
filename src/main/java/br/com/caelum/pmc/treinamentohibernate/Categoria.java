@@ -6,8 +6,12 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
+
 @Entity
 @Cacheable
+@Cache(region="categorias",usage=CacheConcurrencyStrategy.TRANSACTIONAL)
 public class Categoria {
 
 	@Id
