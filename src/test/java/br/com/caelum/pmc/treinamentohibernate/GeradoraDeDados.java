@@ -74,5 +74,6 @@ public class GeradoraDeDados {
 		
 		em.getTransaction().commit();
 		em.close();
+		
 	}
 }
